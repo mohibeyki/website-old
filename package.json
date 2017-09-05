@@ -73,7 +73,7 @@
 		"start": "run-p build watch serve",
 		"build": "run-s sass",
 		"clean": "rimraf dist",
-		"sass": "node-sass --output-style expanded src/milligram.sass dist/milligram.css && node-sass --output-style compressed src/milligram.sass dist/milligram.min.css",
+		"sass": "node-sass src/milligram.scss dist/milligram.css && node-sass src/milligram.scss dist/milligram.min.css --output-style compressed",
 		"autoprefixer": "postcss -u autoprefixer --no-map.inline --autoprefixer.browsers \"last 1 versions\" -r dist/*.css",
 		"banner": "banner-cli dist/*.css",
 		"watch": "onchange src -- run-p build",
